@@ -1,4 +1,5 @@
 from django.contrib import admin
+from django.shortcuts import redirect
 from django.urls import path 
 from  task_app.views import TaskList, TaskDetail, CreateTask, UpdateTask, DeleteTask
 
@@ -15,6 +16,6 @@ urlpatterns = [
 
     path('tasks/eliminar/<int:pk>', DeleteTask.as_view(), name='delete'),
 
-    path('', TaskList.as_view(template_name = "tasks/index.html"), name='read'),
+    path('', lambda request: redirect('tasks/')),
 
 ]

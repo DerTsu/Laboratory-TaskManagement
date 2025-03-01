@@ -16,7 +16,7 @@ class CreateTask(SuccessMessageMixin, CreateView):
     fields = "__all__" 
     success_message = 'Task created succesfully!' 
     def get_success_url(self):        
-        return reverse('leer')
+        return reverse('read')
 
 class TaskDetail(DetailView): 
     model = Task 
@@ -27,7 +27,7 @@ class UpdateTask(SuccessMessageMixin, UpdateView):
     fields = "__all__"
     success_message = 'Task updated succesfully !'
     def get_success_url(self):               
-        return reverse('leer') 
+        return reverse('read') 
 
 class DeleteTask(SuccessMessageMixin, DeleteView): 
     model = Task 
@@ -36,4 +36,4 @@ class DeleteTask(SuccessMessageMixin, DeleteView):
     def get_success_url(self): 
         success_message = 'Task deleted succesfully !' 
         messages.success (self.request, (success_message))       
-        return reverse('leer')
+        return reverse('read')
