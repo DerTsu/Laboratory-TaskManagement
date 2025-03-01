@@ -17,7 +17,7 @@ class Task(models.Model):
     descripcion = models.TextField(blank=True, null=True)
     prioridad = models.IntegerField(choices=PRIORITY_CHOICES, default=2)
     estado = models.CharField(max_length=20, choices=STATUS_CHOICES, default='Pendiente')
-    fecha_creacion = models.DateTimeField(default=timezone.now)
+    fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_limite = models.DateField(null=True, blank=True)
     completado = models.BooleanField(default=False)
 
