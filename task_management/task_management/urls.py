@@ -13,13 +13,13 @@ urlpatterns = [
 
     path('admin/', admin.site.urls),
 
-    path('arepas/', TaskList.as_view(template_name = "tasks/index.html"), name='read'),
+    path('tasks/', TaskList.as_view(template_name = "tasks/index.html"), name='read'),
 
-    path('arepas/detalle/<int:pk>', TaskDetail.as_view(template_name = "tasks/details.html"), name='details'),
+    path('tasks/detalle/<int:pk>', TaskDetail.as_view(template_name = "tasks/details.html"), name='details'),
 
-    path('arepas/crear', CreateTask.as_view(template_name = "tasks/create.html"), name='create'),
+    path('tasks/crear', CreateTask.as_view(template_name = "tasks/create.html"), name='create'),
 
-    path('arepas/editar/<int:pk>', UpdateTask.as_view(template_name = "tasks/update.html"), name='update'), 
+    path('tasks/editar/<int:pk>', UpdateTask.as_view(template_name = "tasks/update.html"), name='update'), 
 
-    path('arepas/eliminar/<int:pk>', DeleteTask.as_view(), name='delete'),   
+    path('tasks/eliminar/<int:pk>', DeleteTask.as_view(), name='delete'),   
 ]

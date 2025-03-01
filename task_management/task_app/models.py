@@ -19,8 +19,6 @@ class Task(models.Model):
     fecha_creacion = models.DateTimeField(auto_now_add=True)
     fecha_limite = models.DateField(null=True, blank=True)
     completado = models.BooleanField(default=False)
-
-    #Hola Sofíaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-
+    
 class Meta:
     db_table = 'tasks'
