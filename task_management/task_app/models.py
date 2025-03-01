@@ -20,5 +20,7 @@ class Task(models.Model):
     fecha_limite = models.DateField(null=True, blank=True)
     completado = models.BooleanField(default=False)
 
+    #Hola Sofíaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
 class Meta:
     db_table = 'tasks'
