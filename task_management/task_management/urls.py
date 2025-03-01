@@ -13,5 +13,8 @@ urlpatterns = [
 
     path('tasks/editar/<int:pk>', UpdateTask.as_view(template_name = "tasks/update.html"), name='update'), 
 
-    path('tasks/eliminar/<int:pk>', DeleteTask.as_view(), name='delete'),   
+    path('tasks/eliminar/<int:pk>', DeleteTask.as_view(), name='delete'),
+
+    path('', TaskList.as_view(template_name = "tasks/index.html"), name='read'),
+
 ]
