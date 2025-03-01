@@ -41,8 +41,8 @@
 
     <div class="form-group">
         <label for="fecha_limite" class="txt_negrita">Fecha Límite</label>
-        {{ form.fecha_limite|add_class:"form-control" }}
-    </div>
+        {{ form.fecha_limite|add_class:"form-control"|attr:"type:date" }}
+    </div>    
 
     <div class="form-check">
         <label class="form-check-label">
