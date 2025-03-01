@@ -1,16 +1,8 @@
 from django.contrib import admin
-from django.urls import path
-from django.contrib import admin
 from django.urls import path 
 from  task_app.views import TaskList, TaskDetail, CreateTask, UpdateTask, DeleteTask
 
-
 urlpatterns = [
-    path('admin/', admin.site.urls),
-]
-
-urlpatterns = [
-
     path('admin/', admin.site.urls),
 
     path('tasks/', TaskList.as_view(template_name = "tasks/index.html"), name='read'),
