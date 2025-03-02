@@ -1,3 +1,5 @@
+# Integrantes
+
 - Jhonatan Ortega - jaortegac@correo.usbcali.edu.co
 - Sofia Moreno - smorenoq@correo.usbcali.edu.co
 - Maria Jose Ramirez - mjramirezm@correo.usbcali.edu.co 
@@ -17,10 +19,9 @@ Sigue estos pasos para configurar el entorno de desarrollo e iniciar la aplicaci
    ```
 
 2. **Activar el entorno virtual:**
-   - En Windows:
-     ```sh
-     env\Scripts\activate
-     ```
+   ```sh
+   env\Scripts\activate
+   ```
 
 3. **Instalar las dependencias del proyecto:**
 
