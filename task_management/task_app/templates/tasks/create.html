@@ -15,8 +15,10 @@
   </head>
 
 <body>
+  {% include 'tasks/nav.html' %}
 
-  <form method="post" enctype="multipart/form-data">
+  <div class="container pb-2 pt-3" style="background-color: #EFEFEF; border-radius: 15px;">
+    <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     
     <div class="form-group">
@@ -43,6 +45,8 @@
     <a href="./" class="btn btn-secondary">Cancelar</a>
     </form>
 
+
+  </div>
   <!-- Al final del body -->
 {# JS y jQuery Bootstrap #}
 {% bootstrap_javascript jquery='full' %} 

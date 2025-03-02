@@ -1,35 +1,43 @@
 <head>
 
-    {# Cargamos la librería #} 
-    {% load bootstrap4 %} 
-  
-    {# CSS Bootstrap #} 
+    {# Cargamos la librería #}
+    {% load bootstrap4 %}
+
+    {# CSS Bootstrap #}
     {% bootstrap_css %} </head>
-    
-    {# Widget Tweaks #}
-    {% load widget_tweaks %}
-  
-    {# Archivos #}
-    {% load static %} <!-- STATIC_URL -->
-  
-  </head>
+
+{# Widget Tweaks #}
+{% load widget_tweaks %}
+
+{# Archivos #}
+{% load static %} <!-- STATIC_URL -->
+
+</head>
+
 <body>
-    <h4>Detalles de la Tarea</h4>
-    <p><span class="txt_negrita">Título:</span> <br> {{ object.titulo }}</p>
-    <p><span class="txt_negrita">Descripción:</span> <br> {{ object.descripcion }}</p>
-    <p><span class="txt_negrita">Prioridad:</span> <br> {{ object.get_prioridad_display }}</p>
-    <p><span class="txt_negrita">Fecha de Creación:</span> <br> {{ object.fecha_creacion }}</p>
-    <p><span class="txt_negrita">Fecha Límite:</span> <br> {{ object.fecha_limite|default:"No asignada" }}</p>
-    <p><span class="txt_negrita">Completado:</span> <br> 
-        {% if object.completado %}
+    {% include 'tasks/nav.html' %}
+
+    <div class="container pb-2 pt-3" style="background-color: #EFEFEF; border-radius: 15px;">
+        <h4>Detalles de la Tarea</h4>
+        <p><span style="font-weight: 500;">Título:</span> <br> {{ object.titulo }}</p>
+        <p><span style="font-weight: 500;">Descripción:</span> <br> {{ object.descripcion }}</p>
+        <p><span style="font-weight: 500;">Prioridad:</span> <br> {{ object.get_prioridad_display }}</p>
+        <p><span style="font-weight: 500;">Fecha de Creación:</span> <br> {{ object.fecha_creacion }}</p>
+        <p><span style="font-weight: 500;">Fecha Límite:</span> <br> {{ object.fecha_limite|default:"No asignada" }}</p>
+        <p><span style="font-weight: 500;">Completado:</span> <br>
+            {% if object.completado %}
             ✅ Sí
-        {% else %}
+            {% else %}
             ❌ No
-        {% endif %}
-    </p>
-    <a href="../" type="submit" class="btn btn-primary">Volver</a>
+            {% endif %}
+        </p>
+        <a href="../" type="submit" class="btn btn-primary mb-3">Volver</a>
+
+    </div>
+
+
 
     <!-- Al final del body -->
     {# JS y jQuery Bootstrap #}
-    {% bootstrap_javascript jquery='full' %} 
-    </body>
+    {% bootstrap_javascript jquery='full' %}
+</body>
