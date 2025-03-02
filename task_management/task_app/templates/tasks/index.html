@@ -24,7 +24,6 @@
             <th width="35%">Título</th>
             <th>Descripción</th>
             <th>Prioridad</th>
-            <th>Estado</th>
             <th>Fecha de creación</th>
             <th>Fecha límite</th>
             <th>Completado</th>
@@ -45,7 +44,6 @@
                     Alta
                 {% endif %}
             </td>
-            <td>{{ tasks.estado }}</td>
             <td>{{ tasks.fecha_creacion|date:"d/m/Y H:i" }}</td>
             <td>{{ tasks.fecha_limite|default:"Sin fecha" }}</td>
             <td>

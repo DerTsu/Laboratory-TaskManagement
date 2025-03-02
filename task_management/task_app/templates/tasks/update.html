@@ -36,11 +36,12 @@
             <label for="prioridad" class="txt_negrita">Prioridad</label>
             {{ form.prioridad|add_class:"form-control" }}
         </div>
-    
-        <div class="form-group">
-            <label for="estado" class="txt_negrita">Estado</label>
-            {{ form.estado|add_class:"form-control" }}
-        </div>
+
+        <div class="form-check">
+            <label class="form-check-label">
+                {{ form.completado|add_class:"form-check-input" }} Completado
+            </label>
+        </div>        
     
         <button type="submit" class="btn btn-primary">Guardar Cambios</button>
         <a href="../" class="btn btn-secondary">Cancelar</a>

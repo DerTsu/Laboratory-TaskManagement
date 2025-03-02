@@ -35,20 +35,9 @@
     </div>
 
     <div class="form-group">
-        <label for="estado" class="txt_negrita">Estado</label>
-        {{ form.estado|add_class:"form-control" }}
-    </div>
-
-    <div class="form-group">
         <label for="fecha_limite" class="txt_negrita">Fecha Límite</label>
         {{ form.fecha_limite|add_class:"form-control"|attr:"type:date" }}
     </div>    
-
-    <div class="form-check">
-        <label class="form-check-label">
-            {{ form.completado|add_class:"form-check-input" }} Completado
-        </label>
-    </div>
 
     <button type="submit" class="btn btn-primary">Aceptar</button>
     <a href="./" class="btn btn-secondary">Cancelar</a>
